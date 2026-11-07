@@ -4,7 +4,7 @@
 **Tema:** evaluación de la distancia funcional de observación según dimensiones y resolución
 **Medio:** gran formato y material publicitario (POP, roll-up, SEG, lona de fachada, valla)
 **Modalidad:** individual (equipo opcional) · 1000 XP
-**Archivo:** `index.html` (≈ 1,6 MB, sin dependencias en tiempo de ejecución; jsPDF 2.5.1 y AutoTable 3.8.2 incrustados) y la carpeta `descargas/` con los cinco TIFF.
+**Archivo:** `index.html` (≈ 1,6 MB, sin dependencias en tiempo de ejecución; jsPDF 2.5.1 y AutoTable 3.8.2 incrustados) y la carpeta `descargas/` con los cinco PNG.
 
 Ubicación prevista:
 
@@ -13,14 +13,14 @@ tareas/tarea-NN/1__EC_Experiencia concreta/
   index.html
   README.md
   descargas/
-    caso1_display_hablador_POP.tif
-    caso2_rollup_stand_retractil.tif
-    caso3_grafico_textil_SEG.tif
-    caso4_banner_lona_fachada.tif
-    caso5_gigantografia_valla.tif
+    caso1_display_hablador_POP.png
+    caso2_rollup_stand_retractil.png
+    caso3_grafico_textil_SEG.png
+    caso4_banner_lona_fachada.png
+    caso5_gigantografia_valla.png
 ```
 
-`index.html` enlaza los TIFF por ruta relativa (`descargas/…`). La carpeta debe quedar junto al HTML en el servidor.
+`index.html` enlaza los PNG por ruta relativa (`descargas/…`). La carpeta debe quedar junto al HTML en el servidor (en GitHub Pages: `index.html` y `descargas/` en la raíz del repositorio).
 
 ---
 
@@ -42,7 +42,7 @@ La tabla estándar de resolución por distancia solo aparece después de resolve
 | Estación | Fase | Mecánica | Puntaje |
 |---|---|---|---|
 | 0 · Registro | — | Formulario validado: nombres, apellidos, correo institucional, equipo opcional | 0 |
-| 1 · La escena | EC | Cinco piezas con descarga del TIFF; 3 zonas por pieza que abren una lupa a 120 × 120 píxeles reales, con control «Ver desde» de 0.3 a 20 m | 150 (10 por zona) |
+| 1 · La escena | EC | Cinco piezas con descarga del PNG; 3 zonas por pieza que abren una lupa a 120 × 120 píxeles reales, con control «Ver desde» de 0.3 a 20 m | 150 (10 por zona) |
 | 2 · Bitácora | EC | Medición en Photoshop (ancho y alto en cm, PPI, píxeles, modo y perfil) validada contra el archivo; textos «Lo que observo» y «Relación con la ficha» | 150 (30 por pieza: 20/15/10 según intentos + 10 por los textos) |
 | 3 · Hipótesis previa | EC → OR | Distancia estimada y justificación por pieza; no se califica | 50 |
 | 4 · Enigma | EC → OR | «¿Quién miente?» (contradicción entre declaración y evidencia) + candado de tres ruedas | 75 + 125 |
@@ -82,21 +82,20 @@ La tabla estándar de resolución por distancia solo aparece después de resolve
 
 ## 3. Fidelidad a la fuente
 
-### 3.1 Archivos (medidos en los TIFF entregados)
+### 3.1 Archivos (medidos en los PNG entregados)
 
 | Caso | Pieza | Píxeles | PPI | Medida (cm) | Modo · perfil | Peso |
 |---|---|---|---|---|---|---|
-| 1 | Display / Hablador POP | 1890 × 2775 | 300 | 16.00 × 23.50 | CMYK · Coated FOGRA39 | 22.4 MB |
-| 2 | Roll-up retráctil | 472 × 1181 | 150 | 7.99 × 20.00 | CMYK · Coated FOGRA39 | 5.0 MB |
-| 3 | Gráfico textil SEG | 1181 × 866 | 100 | 30.00 × 22.00 | CMYK · Coated FOGRA39 | 8.3 MB |
-| 4 | Banner lona fachada | 1141 × 1701 | 72 | 40.25 × 60.01 | RGB · sin perfil | 8.2 MB |
-| 5 | Gigantografía / Valla | 2953 × 1261 | 25 | 300.02 × 128.12 | CMYK · Coated FOGRA39 | 18.9 MB |
+| 1 | Display / Hablador POP | 1890 × 2775 | 300 | 16.00 × 23.50 | RGB · sRGB IEC61966-2.1 | 4.7 MB |
+| 2 | Roll-up retráctil | 472 × 1181 | 150 | 7.99 × 20.00 | RGB · sRGB IEC61966-2.1 | 0.8 MB |
+| 3 | Gráfico textil SEG | 1181 × 866 | 100 | 30.00 × 22.00 | RGB · sRGB IEC61966-2.1 | 1.7 MB |
+| 4 | Banner lona fachada | 1141 × 1701 | 72 | 40.25 × 60.01 | RGB · sRGB IEC61966-2.1 | 2.5 MB |
+| 5 | Gigantografía / Valla | 2953 × 1261 | 25 | 300.10 × 128.15 | RGB · sRGB IEC61966-2.1 | 4.4 MB |
 
-Los cinco TIFF tienen compresión LZW y conservan las capas de Photoshop.
+Los cinco PNG tienen canal alfa y la resolución guardada en el archivo (la del Caso 5 es 24.994 PPI, por eso mide 300.10 cm). La página acepta ±0.06 cm y ±0.5 PPI.
 
 **Diferencias entre la ficha de la guía y los archivos**, usadas en el enigma:
 - **Caso 1:** la ficha declara **16 × 23 cm**; el archivo mide **16 × 23.50 cm** (5 mm más de alto). Es la línea de «¿Quién miente?».
-- **Caso 4:** es el único archivo en **RGB sin perfil**; los otros cuatro son CMYK con FOGRA39. La ficha no declara el modo de color.
 - **Caso 2:** la ficha lo indica como «muestra a escala». La pregunta 2 del Puente a OR lo retoma con una medida final de 85 × 200 cm, que es un **valor de ejemplo: confirmar**.
 
 ### 3.2 Tabla estándar (guía de la tarea)
@@ -114,13 +113,13 @@ Los rangos y las resoluciones salen de la guía de la tarea (práctica de la ind
 ### 3.3 Claves del enigma
 
 - **¿Quién miente?:** línea «Caso 1 · alto 23 cm» + evidencia «Photoshop mide 23.50 cm de alto en el Caso 1».
-- **Candado de tres ruedas:** **05 · 01 · 28**.
+- **Candado de tres ruedas:** **05 · 02 · 28**.
   - Rueda 1: 23.50 − 23 = 0.5 cm = 05 mm.
-  - Rueda 2: un archivo sin perfil (Caso 4).
+  - Rueda 2: el único caso con menos de 10 cm de ancho es el Caso 2 (7.99 cm).
   - Rueda 3: 72 ÷ 2.54 = 28.3 → 28 píxeles por cm.
 - **Errores que la página detecta y nombra:**
   - rueda 1 con 50 o 00 (diferencia en cm en lugar de mm), o con 23 o 24 (una medida en lugar de la diferencia);
-  - rueda 2 con 04 (contó los archivos que sí tienen perfil);
+  - rueda 2 con 08 (escribió el ancho en lugar del número del caso);
   - rueda 3 con 72 (PPI en lugar de píxeles por cm) o con 29 (redondeo).
 - **Ayuda progresiva:** en el intento 1, una pista general; en el 2, qué dato mirar; en el 3, la operación resuelta.
 
@@ -173,7 +172,7 @@ Recuadro de 120 × 120 píxeles del archivo, centrado en cada zona. Su medida en
 - **Envío al panel docente:** al final del `<body>` está `<script src="/envio-resultados.js" data-sub="ec"></script>`.
 - **Descargas:**
   - el informe usa la capacidad `downloads` cuando la página corre en claude.ai y la descarga directa del navegador fuera de ella;
-  - los TIFF se descargan con enlaces directos a `descargas/`.
+  - los PNG se descargan con enlaces directos a `descargas/`.
 
 ---
 
@@ -186,12 +185,12 @@ Pruebas en Playwright con Chromium, sirviendo la carpeta por HTTP:
   - alto del Caso 1 copiado de la ficha (23 cm);
   - texto con una solución;
   - acusación equivocada;
-  - combinación 50 · 04 · 72;
+  - combinación 50 · 08 · 72;
   - Caso 5 en el rango 3–6 m.
   - Cada error mostró PISTA · DATO CLAVE · CONTEXTO y permitió reintentar.
   - Puntaje del recorrido con errores: 935 de 1000; sin errores se obtienen 1000.
 - **Teclado en las ruedas:** los dígitos entran por la derecha, desde cualquier posición del cursor.
-- **Descargas:** del TIFF, del informe PDF y del informe Markdown.
+- **Descargas:** del PNG, del informe PDF y del informe Markdown.
 - **Recarga:** en una página nueva, «Continuar» recupera las respuestas, los intentos y el puntaje.
 - **Conceptos ocultos:** ningún concepto técnico (pixelado, agudeza, sobredimensionado) aparece en las Estaciones 0 y 1, revisando también `aria-label`, `title` y `alt`.
 - **Pantallas:** capturas a 1280 px y 375 px, sin desborde horizontal.
